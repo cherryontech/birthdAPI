@@ -80,7 +80,7 @@ namespace BirthdAPI.Controllers
             _context.BirthdItems.Add(birthdItem);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetBirthdItem", new { id = birthdItem.Id }, birthdItem);
+            return CreatedAtAction(nameof(GetBirthdItem), new { id = birthdItem.Id }, birthdItem);
         }
 
         // DELETE: api/BirthdItems/5

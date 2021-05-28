@@ -1,6 +1,6 @@
 using System;
 
-namespace birthdAPI
+namespace BirthdAPI
 {
     public class WeatherForecast
     {

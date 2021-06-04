@@ -41,6 +41,20 @@ namespace BirthdAPI.Controllers
             return birthdItem;
         }
 
+        // GET: api/BirthdItems/next
+[HttpGet("next")]
+        public async Task<ActionResult<BirthdItem>> GetBirthdItem()
+        {
+            var birthdItem = await _context.BirthdItems.FindAsync((long)1);
+
+            if (birthdItem == null)
+            {
+                return NotFound();
+            }
+
+            return birthdItem;
+        }
+
         // PUT: api/BirthdItems/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

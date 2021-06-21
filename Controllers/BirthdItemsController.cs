@@ -42,7 +42,7 @@ namespace BirthdAPI.Controllers
         }
 
         // GET: api/BirthdItems/next
-[HttpGet("next")]
+        [HttpGet("next")]
         public async Task<ActionResult<BirthdItem>> GetBirthdItem()
         {
             var birthdItem = await _context.BirthdItems.FindAsync((long)1);

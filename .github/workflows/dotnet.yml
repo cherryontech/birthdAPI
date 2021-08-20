@@ -20,9 +20,7 @@ jobs:
 #     - name: Restore dependencies
 #       run: dotnet restore
     - name: Build
-      run: dotnet build
-      env:
-        DOTNET_ROOT: .
+      uses: Elskom/build-dotnet@v1.1.1
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
